@@ -1,0 +1,47 @@
+.navbar {
+  width: 100vw;
+  height: 3.5rem;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(113, 228, 98);
+  border-bottom: 1px solid #c5c5c5;
+  padding: 0.5rem .5rem;
+  z-index: 10;
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+.navbar-links-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-links {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+}
+
+.navbar-icon {
+  margin-left: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+
+@media screen and (max-width: 640px) {
+  .navbar-links {
+    width: 45px;
+    height: 45px;
+    margin-right: 2vw;
+  }
+
+  .navbar-hamburger {
+    display: block;
+  }
+}

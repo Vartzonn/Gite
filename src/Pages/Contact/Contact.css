@@ -1,0 +1,217 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.contact-container > div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.contact-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  object-fit: cover;
+  user-select: none;
+}
+
+.contact-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  
+}
+.contact-info::-webkit-scrollbar {
+  width: 12px;
+}
+.contact-info::-webkit-scrollbar-track {
+  background: transparent;
+}
+.contact-info::-webkit-scrollbar-thumb {
+  background-color: rgba(50, 205, 50, 0.425);
+  border-radius: 20px;
+}
+.contact-info > .contact-phone,
+.contact-form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PARTIE TÉLÉPHONE */
+.contact-phone > p {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  line-height: 2;
+}
+
+
+/* PARTIE FORMULAIRE */
+.mail-title {
+  margin-top: 2rem;
+}
+.contact-form {
+  margin-top: 3rem;
+}
+.contact-form label {
+  font-size: 1.3rem;
+}
+.contact-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact-inputs > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.contact-inputs > div > input {
+  width: 55%;
+  height: 3rem;
+}
+
+.contact-inputs > div > input,
+.contact-inputs ~ textarea,
+.contact-inputs ~ button {
+  border-radius: 10px;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.contact-message-label {
+  margin-bottom: 0.5rem;
+}
+.contact-inputs ~ textarea {
+  min-width: 55%;
+  max-width: 80%;
+  min-height: 40%;
+  max-height: 40%;
+}
+
+.contact-inputs ~ .contact-button {
+  width: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #f1f1f1;
+  color: #f1f1f1;
+  transition: background-color .3s, color .3s;
+}
+.contact-button:hover {
+  background-color: #f1f1f1;
+  color: #000;
+}
+
+.contact-mail-sent {
+  font-size: 1.3rem;
+  padding-top: 0.7rem;
+  display: none;
+  text-align: center;
+}
+.mail-sent-display {
+  display: inline;
+}
+
+
+/* LOADER */
+.spinner-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  width: 100%;
+  height: 40px;
+}
+ 
+
+
+@media screen and (max-width: 1000px) {
+  .contact-container > .contact-info {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow-y: visible;
+  }
+  .contact-info > .contact-phone,
+  .contact-form {
+    width: auto;
+    justify-content: space-around;
+    height: auto;
+  }
+  .contact-phone > h1 {
+    text-align: center;
+    line-height: 1.3;
+  }
+  .contact-phone > p {
+    margin-top: 0;
+  }
+  .contact-info > .contact-form {
+    padding-top: 1rem;
+  }
+  .contact-form label {
+    font-size: 1.2rem;
+  }
+  .contact-message-label {
+    margin-bottom: 10px;
+  }
+  .contact-inputs ~ textarea {
+    min-width: 80%;
+    max-width: 100%;
+    min-height: 20%;
+    min-height: 40%;
+  }
+  .contact-inputs ~ .contact-button {
+    margin-top: 3%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact-container > .contact-info {
+    font-size: clamp(1rem, 1.2rem, 1.3rem);
+  }
+  .contact-info > .contact-phone > p {
+    padding-top: 10px;
+  }
+  .contact-info > .contact-form {
+    padding-top: 1.8rem;
+  }
+  .contact-inputs ~ .contact-button {
+    margin-top: 5%;
+  }
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 328px) {
+  .contact-container > .contact-info h1 {
+    font-size: 2rem;
+  }
+}

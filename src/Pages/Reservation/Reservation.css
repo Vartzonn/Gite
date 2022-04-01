@@ -1,0 +1,176 @@
+.reservation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.reservation-container > div {
+  width: 50%;
+  height: 100%;
+}
+
+/* PARTIE CALENDRIERS */
+.reservation-left-side {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 50px;
+  padding: 2.5rem 0rem 3rem 1.5rem;
+}
+.reservation-left-side > div:first-child {
+  transform: scale(1);
+}
+.reservation-date-picker {
+  transform: scale(1.1);
+}
+.react-datepicker__day:not(.react-datepicker__day--highlighted) {
+  background-color: rgb(0, 211, 0);
+  border-radius: 0.3rem;
+}
+.react-datepicker__day--in-range {
+  background-color: rgb(0, 56, 211) !important;
+}
+.react-datepicker__day--highlighted {
+  background-color: rgba(238, 0, 0, 0.945) !important;
+  color: #000 !important;
+  pointer-events: none;
+}
+.react-datepicker__day--outside-month {
+  opacity: 0.3;
+}
+
+/* PARTIE TEXTES */
+.reservation-right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+.reservation-right-side > div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+/* PARTIE TARIFS */
+.tarifs-container {
+  border-radius: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  height: 30%;
+  width: 90%;
+}
+.tarifs-container > h1 {
+  width: 100%;
+  text-align: center;
+}
+.tarif-list {
+  line-height: 1.6;
+  font-size: 1.25rem;
+  padding-left: 8rem;
+}
+
+/* PARTIE BOOKING */
+.booking-container {
+  height: 65%;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Pour le bouton de réservation */
+.booking-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.booking-btn:hover {
+  background-color: rgb(191, 255, 177);
+}
+.booking-link {
+  text-decoration: none;
+  color: black;
+}
+/* On rajoute une icône qui indique que ça ouvrira une page externe */
+.booking-btn::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
+  background-image: url("./external-link.svg");
+}
+
+.booking-btn ~ p {
+  font-size: 1.3rem;
+}
+
+/* Texte qui résume les dates et prix sélectionnées */
+.booking-preview {
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding-top: 1.2rem;
+}
+/* Espace personnalisé d'un <br /> */
+.breakTextSpace {
+  content: "";
+  display: block;
+  margin: 1.1rem;
+}
+/* Si l'utilisateur a choisi des dates invalides */
+.booking-preview-error-card {
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1080px) {
+  .reservation-left-side {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .reservation-container {
+    height: auto;
+  }
+  .reservation-left-side {
+    padding: 1rem 0 2rem 0;
+  }
+  .reservation-right-side {
+    width: auto!important;
+    padding: 3% 2% 3% 2%;
+  }
+  .tarifs-container {
+    width: 100%;
+  }
+  .tarifs-container > h1 {
+    width: 100%;
+    text-align: center;
+  }
+  .tarif-list {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .reservation-container {
+    flex-direction: column-reverse;
+  }
+  .reservation-right-side {
+    text-align: center;
+  }
+}

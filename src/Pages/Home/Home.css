@@ -1,0 +1,192 @@
+.home-background {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("imgHome.webp");
+  color: #000;
+}
+.home-background > div {
+  height: 100%;
+}
+.first-visit-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 10000000;
+}
+.first-visit-btn {
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.first-visit-btn:hover {
+  background-color: rgb(57, 57, 57);
+}
+.home-title-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.home-title {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 0 0 1px #000;
+  margin-top: 15%;
+}
+.home-adresse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  height: auto;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.863);
+  border-radius: 30px;
+  margin-top: 3rem;
+  line-height: 1.5;
+}
+
+.home-card-container {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-height: 550px) and (min-width: 1050px) {
+  .home-title-container {
+    width: 50%;
+  }
+  .home-card-container {
+    width: 40%;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .home-background {
+    flex-direction: column;
+  }
+  .first-visit-container {
+    width: 700px;
+    height: 400px;
+  }
+  .home-title-container {
+    width: 60%;
+  }
+  .home-title {
+    font-size: 4.5rem;
+    margin-top: 30px;
+  }
+  .home-adresse {
+    width: 70%;
+    height: auto;
+    margin-top: 2rem;
+  }
+  .home-card-container {
+    width: 100%;
+    flex-direction: column;
+  }
+  .home-card-container > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .first-visit-container {
+    width: 500px;
+    height: auto;
+  }
+  .home-title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 704px) {
+  .home-title-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 591px) {
+  .home-card-container {
+    margin-bottom: 5rem;
+  }
+  .home-adresse {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .first-visit-container {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 0;
+    font-size: 2rem;
+  }
+  .home-title-container {
+    width: 100%;
+    padding-top: 3rem;
+  }
+  .home-card-container {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width:371px) {
+  .home-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 301px) {
+  .first-visit-container {
+    padding: 30px;
+    font-size: 2rem;
+  }
+  .first-visit-btn {
+    width: 100%;
+    height: 50px;
+    font-size: 22px;
+  }
+  .home-title {
+    font-size: 3rem;
+  }
+}
