@@ -9,8 +9,8 @@ export default function Home() {
   const [firstVisit, setFirstVisit] = useState(true);
 
   useEffect(() => {
-    if (!localStorage.getItem("firstVisit")) {
-      localStorage.setItem("firstVisit", true);
+    if (!sessionStorage.getItem("firstVisit")) {
+      sessionStorage.setItem("firstVisit", true);
     } else {
       setFirstVisit(false);
     }
@@ -34,6 +34,8 @@ export default function Home() {
     <div className="home-container">
       {firstVisit && (
         <div className="first-visit-container">
+          <h3><u>Message d'information :</u></h3>
+          <br />
           <p>
             Le gîte n'étant pas encore terminé, aucune photo ne correspond
             à la réalité et les réservations ne sont pas actives.
